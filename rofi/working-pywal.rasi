@@ -1,0 +1,138 @@
+* {
+    font: "FiraCode Nerd Font 12";
+}
+
+window {
+    transparency: "real";
+    background-color: #1a1520cc;
+    text-color: #e8e3f0;
+    border: 2px solid;
+    border-color: #ff6b9d;
+    border-radius: 10px;
+    width: 800px;
+    padding: 20px;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+}
+
+message {
+    border: 0;
+    border-color: #ff6b9d;
+    padding: 1px;
+}
+
+textbox {
+    text-color: #e8e3f0;
+}
+
+inputbar {
+    children: [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: #2d1b2e;
+    text-color: #e8e3f0;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 0px 0px 15px 0px;
+    border: 1px solid;
+    border-color: #7c4dff;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0px 0.3em 0em 0em;
+    text-color: #ff6b9d;
+    font-weight: bold;
+}
+
+prompt {
+    text-color: #bb86fc;
+    font-weight: bold;
+}
+
+entry {
+    text-color: #e8e3f0;
+    placeholder-color: #898e9c;
+}
+
+case-indicator {
+    text-color: #e8e3f0;
+}
+
+listview {
+    fixed-height: 0;
+    border: 0;
+    spacing: 3px;
+    scrollbar: false;
+    padding: 5px 0px 0px 0px;
+}
+
+element {
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    text-color: #e8e3f0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    font-weight: normal;
+}
+
+element.normal.normal {
+    background-color: transparent;
+    text-color: #e8e3f0;
+}
+
+element.normal.urgent {
+    background-color: #ff6b9d22;
+    text-color: #ff6b9d;
+}
+
+element.normal.active {
+    background-color: #7c4dff22;
+    text-color: #bb86fc;
+}
+
+element.selected.normal {
+    background-color: #ff6b9d;
+    text-color: #1a1520;
+    font-weight: bold;
+}
+
+element.selected.urgent {
+    background-color: #ff6b9d;
+    text-color: #1a1520;
+}
+
+element.selected.active {
+    background-color: #bb86fc;
+    text-color: #1a1520;
+}
+
+element.alternate.normal {
+    background-color: transparent;
+    text-color: #e8e3f0;
+}
+
+element.alternate.urgent {
+    background-color: #ff6b9d11;
+    text-color: #ff6b9d;
+}
+
+element.alternate.active {
+    background-color: #7c4dff11;
+    text-color: #bb86fc;
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-width: 8px;
+    padding: 0;
+    handle-color: #ff6b9d;
+}

@@ -1,0 +1,151 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 30,
+  "modules-left": ["clock", "hyprland/workspaces", "custom/playerctl"],
+  //"modules-left": ["clock","hyprland/window"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "disk",
+    "custom/disk",
+    "custom/gpu",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "tray"
+  ],
+
+  "hyprland/window": {
+    "format": "{}"
+  },
+
+  "disk": {
+    "interval": 30,
+    "format": "🖴 {free}/{total}",
+    "path": "/",
+    "unit": "GB",
+    "tooltip": true,
+    "tooltip-format": "Disk Usage\nUsed: {used} ({percentage_used}%)\nFree: {free} ({percentage_free}%)\nTotal: {total}",
+    "warning": 70,
+    "critical": 90
+  },
+
+  "custom/disk": {
+    "interval": 30,
+    "format": "🎮 {}",
+    "exec": "~/.config/waybar/scripts/disk_usage.sh --games",
+    "on-click": "kitty -e yazi /mnt/juegos"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  },
+
+  //"custom/weather" : {
+  //shows the current weather and forecast
+  // "tooltip" : true,
+  //"format" : "{}",
+  //"interval" : 30,
+  //"exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+  //"return-type" : "json"
+  //},
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": "  {:%I:%M %p    %a, %b %e}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}   {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " ", "  "]
+    }
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "Mic: {volume}%",
+    "format-source-muted": "Mic: Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  },
+
+  "temperature": {
+    "thermal-zone": 1,
+    "format": "{temperatureF}°F ",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C "
+  },
+
+  "cpu": {
+    "format": "  {usage}%"
+  },
+
+  "memory": {
+    "format": "  {used:0.1f}G/{total:0.1f}G",
+    "interval": 5
+  },
+
+  "custom/gpu": {
+    "exec": "~/.config/waybar/scripts/gpu_usage.sh",
+    "interval": 5,
+    "format": "NVIDIA {}%"
+  },
+
+  "custom/playerctl": {
+    "format": "{}",
+    "exec": "playerctl metadata title",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "interval": 1,
+    "tooltip": false
+  },
+
+  "custom/playerctli": {
+    "format": "{}",
+    "interval": 2,
+    "exec": "~/.config/waybar/scripts/playerctl_status.sh",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  }
+}

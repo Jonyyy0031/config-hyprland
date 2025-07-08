@@ -1,0 +1,155 @@
+* {
+    border: none;
+    border-radius: 6px;
+    font-family: "FiraCode Nerd Font", "JetBrainsMono Nerd Font",  "Nerd Fonts";
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
+    transition: 0.3s;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #F9F7FB;
+}
+
+window#waybar.empty #window {
+    background: rgba(12, 12, 12, 0.0);
+}
+
+tooltip {
+    background: #0B0B0D;
+    border-radius: 6px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #0B0B0D;
+    transition: 0.3s;
+}
+
+#workspaces button {
+    padding: 6px;
+    color: #494949;
+    margin-right: 6px;
+}
+
+#workspaces button.active {
+    color: #F9F7FB;
+}
+
+#workspaces button.focused {
+    color: #F9F7FB;
+    background: #0B0B0D;
+    border-radius: 6px;
+}
+
+#workspaces button.urgent {
+    color: #0B0B0D;
+    background: #F9F7FB;
+    border-radius: 6px;
+}
+
+#workspaces button:hover {
+    background: #0B0B0D;
+    color: #cdd6f4;
+    border-radius: 6px;
+}
+
+#custom-power_profile,
+#custom-weather,
+#window,
+#clock,
+#pulseaudio,
+#temperature,
+#workspaces,
+#tray,
+#cpu,
+#memory,
+#custom-gpu,
+#custom-playerctl,
+#disk {
+    background: #0B0B0D;
+    opacity: 0.8;
+    padding: 0px 12px;
+    margin: 0;
+    margin-top: 6px;
+    min-height: 26px;
+}
+
+#temperature {
+    border-radius: 6px;
+}
+
+#temperature.critical {
+    color: #eba0ac;
+}
+
+#cpu, #memory, #custom-gpu, #disk {
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-right: 8px;
+    color: #F9F7FB;
+}
+
+#disk.warning {
+    color: #f7b801;
+}
+
+#disk.critical {
+    color: #eba0ac;
+}
+
+#tray {
+    border-radius: 6px;
+    margin-right: 6px;
+    padding: 0px 8px;
+}
+
+#workspaces {
+    background: #0B0B0D;
+    border-radius: 6px;
+    margin-left: 6px;
+    padding-right: 0px;
+    padding-left: 8px;
+}
+
+#custom-power_profile {
+    color: #F9F7FB;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#window {
+    border-radius: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#clock, #custom-playerctl {
+    color: #F9F7FB;
+    border-radius: 6px;
+    margin-left: 6px;
+    border-right: 0px;
+    transition: 0.3s;
+    padding-left: 10px;
+}
+
+#pulseaudio {
+    color: #F9F7FB;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 6px;
+}
+
+#pulseaudio.microphone {
+    color: #F9F7FB;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 6px;
+    margin-right: 6px;
+    padding-right: 10px;
+}
+
+/* Playerctl mejorado */
+#custom-playerctl {
+    color: #cba6f7;
+}

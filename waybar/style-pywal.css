@@ -1,0 +1,160 @@
+@import url("file:///home/jonylinux/.cache/wal/colors-waybar.css");
+
+* {
+    border: none;
+    border-radius: 6px;
+    font-family: "FiraCode Nerd Font", "JetBrainsMono Nerd Font",  "Nerd Fonts";
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
+    transition: 0.3s;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: @foreground;
+}
+
+window#waybar.empty #window {
+    background: rgba(12, 12, 12, 0.0);
+}
+
+tooltip {
+    background: @background;
+    border-radius: 6px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: @background;
+    transition: 0.3s;
+    color: @foreground;
+}
+
+#workspaces button {
+    padding: 6px;
+    color: @color8;
+    margin-right: 6px;
+}
+
+#workspaces button.active {
+    color: @foreground;
+}
+
+#workspaces button.focused {
+    color: @foreground;
+    background: @background;
+    border-radius: 6px;
+}
+
+#workspaces button.urgent {
+    color: @background;
+    background: @color1;
+    border-radius: 6px;
+}
+
+#workspaces button:hover {
+    background: @color0;
+    color: @color4;
+    border-radius: 6px;
+}
+
+#custom-power_profile,
+#custom-weather,
+#window,
+#clock,
+#pulseaudio,
+#temperature,
+#workspaces,
+#tray,
+#cpu,
+#memory,
+#custom-gpu,
+#custom-playerctl,
+#disk {
+    background: @background;
+    opacity: 0.8;
+    padding: 0px 12px;
+    margin: 0;
+    margin-top: 6px;
+    min-height: 26px;
+    color: @foreground;
+}
+
+#temperature {
+    border-radius: 6px;
+}
+
+#temperature.critical {
+    color: @color1;
+}
+
+#cpu, #memory, #custom-gpu, #disk {
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-right: 8px;
+    color: @foreground;
+}
+
+#disk.warning {
+    color: @color3;
+}
+
+#disk.critical {
+    color: @color1;
+}
+
+#tray {
+    border-radius: 6px;
+    margin-right: 6px;
+    padding: 0px 8px;
+}
+
+#workspaces {
+    background: @background;
+    border-radius: 6px;
+    margin-left: 6px;
+    padding-right: 0px;
+    padding-left: 8px;
+}
+
+#custom-power_profile {
+    color: @foreground;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#window {
+    border-radius: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#clock, #custom-playerctl {
+    color: @foreground;
+    border-radius: 6px;
+    margin-left: 6px;
+    border-right: 0px;
+    transition: 0.3s;
+    padding-left: 10px;
+}
+
+#pulseaudio {
+    color: @foreground;
+    margin-right: 6px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 6px;
+}
+
+#pulseaudio.microphone {
+    color: @foreground;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 6px;
+    margin-right: 6px;
+    padding-right: 10px;
+}
+
+/* Playerctl con color dinámico */
+#custom-playerctl {
+    color: @color5;
+}

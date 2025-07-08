@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "j" ]
+run  = "cd ~/juegos"
+desc = "Cd to ~/juegos"

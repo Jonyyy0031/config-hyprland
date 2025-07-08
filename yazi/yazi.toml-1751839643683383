@@ -1,0 +1,37 @@
+[manager]
+ratio = [1, 4, 3]  # Paneles: navegación, archivos, preview
+sort_by = "modified"
+sort_sensitive = true
+sort_reverse = false
+sort_dir_first = true
+linemode = "size"
+show_hidden = true
+show_symlink = true
+
+[preview]
+tab_size = 2
+max_width = 600
+max_height = 900
+cache_dir = ""
+
+[opener]
+# Configurar programas para abrir archivos
+edit = [
+    { run = 'code "$@"', desc = "VSCode", for = "unix" },
+    { run = 'nano "$@"', desc = "Nano", for = "unix" },
+]
+
+[open]
+rules = [
+    { name = "*/", use = [ "edit", "open", "reveal" ] },
+    { mime = "text/*", use = [ "edit", "reveal" ] },
+    { mime = "image/*", use = [ "open", "reveal" ] },
+    { mime = "video/*", use = [ "play", "reveal" ] },
+    { mime = "audio/*", use = [ "play", "reveal" ] },
+    { mime = "inode/directory", use = [ "edit", "open", "reveal" ] },
+]
+
+[which]
+sort_by = "none"
+sort_sensitive = false
+sort_reverse = false

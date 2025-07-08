@@ -1,0 +1,7 @@
+@import "~/.cache/wallust/colors-rofi.rasi"
+
+configuration {
+  display-drun: "Apps";
+  show-icons: true;
+  icon-theme: "Papirus-Dark";
+}
