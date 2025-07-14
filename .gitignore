@@ -44,3 +44,6 @@ mimeapps.list
 trashrc
 user-dirs.dirs
 user-dirs.locale
+QtProject.conf
+biolab.si/
+dconf/

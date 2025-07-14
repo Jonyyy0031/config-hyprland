@@ -12,11 +12,11 @@
 # How the image is parse, in order to get the colors:
 # full - resized - wal - thumb -  fastresize - kmeans
 
-backend = "full"
+backend = "kmeans"
 
 # What color space to use to produce and select the most prominent colors:
 # lab - labmixed - lch - lchmixed
-color_space = "lch"
+color_space = "labmixed"
 
 # Use the most prominent colors in a way that makes sense, a scheme color palette:
 # dark - dark16 - darkcomp - darkcomp16
@@ -24,11 +24,12 @@ color_space = "lch"
 # harddark - harddark16 - harddarkcomp - harddarkcomp16
 # softdark - softdark16 - softdarkcomp - softdarkcomp16
 # softlight - softlight16 - softlightcomp - softlightcomp16
-palette = "dark"
+palette = "dark16"
 
 # Ensures a "readable contrast" (OPTIONAL, disabled by default)
 # Should only be enabled when you notice an unreadable contrast frequently happening
 # with your images. The reference color for the contrast is the background color.
+
 check_contrast = true
 
 # Color saturation, between [1% and 100%] (OPTIONAL, disabled by default)
@@ -40,6 +41,7 @@ saturation = 60
 #alpha = 100
 
 fallback_generator = "complementary"
+threshold = 11
 
 [templates]
 # NOTE: prefer '' over "" for paths, avoids escaping.

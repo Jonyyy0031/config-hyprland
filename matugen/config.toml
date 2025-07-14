@@ -1,0 +1,10 @@
+[config]
+
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = './output/kitty-colors.conf'
+
+[templates.waybar]
+input_path = './templates/colors.css'
+output_path = './output/colors.css'
+ 
